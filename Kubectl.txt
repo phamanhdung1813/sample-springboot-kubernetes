@@ -1,0 +1,8 @@
+minikube docker-env
+kubectl create deployment springboot-kubernetes --image=springboot-kubernetes:v1 --port=8080
+kubectl expose deployment springboot-kubernetes --type=NodePort
+kubectl get service
+minikube service springboot-kubernetes --url
+
+#YML 
+kubectl apply -f springboot-kubernetes.yaml
